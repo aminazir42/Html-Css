@@ -1,0 +1,302 @@
+git<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<Title>home</Title>
+<style>
+  body {
+  	background-image: url('https://wallpaperswide.com/download/light_background-wallpaper-2560x1440.jpg'); 
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    font-size: 15px;
+  }
+  
+  
+  .header {
+      
+      background-color: #00508C;
+      color: white;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px; 
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .icon {
+	color:blue;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #E5F4FF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 30px;
+    }
+
+  
+
+    .icon-text {
+      font-size: 18px;
+      color: black;
+    }
+
+    .header-right {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+    }
+
+    .dashboard-icon img {
+      width: 20px; 
+      height: 20px; 
+      margin-left: 5px;
+    }
+
+  .container {
+   
+    padding: 20px;
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(14, 15, 15, 0.9);
+  }
+
+  .container1 {
+    padding: 20px;
+	border-radius:8px;
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(14, 15, 15, 0.9);
+}
+
+
+  .section-header {
+   color:#5D5D5D;
+    margin-bottom: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+   color:#5D5D5D;
+    margin-bottom: 5px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+	background-color:transparent;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .form-group input[type="submit"] {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .btn {
+    margin-left: 5%;
+    margin-top: 2%;
+    background-color: #00508C; /* Changed button color */
+    padding: 16px 40px;
+    color: #fff;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .btn1 {
+    margin-top: 2%;
+    background-color: white;
+    padding: 14px 40px;
+    color: #00508C; /* Changed button color */
+    letter-spacing: 2px;
+    border-radius: 10px;
+    border: 2px solid #00508C; /* Changed button color */
+  }
+
+  .btn:hover {
+    background-color: #003C6E; /* Darker color on hover */
+  }
+
+  .btn1:hover {
+    background-color: #00508C; /* Changed button color */
+    color: #fff;
+  }
+
+  .jb1 {
+    box-shadow: 0 2px 4px rgba(14, 15, 15, 0.5);
+  }
+
+  .pp {
+    margin-left:69%;
+	
+    color: #737373;
+    font-size: 12px;
+  }
+
+  #jobDetail {
+  border-radius:4px;
+    color: #5D5D5D;
+    font-weight:200;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #jobDetail div {
+    flex: 1 1 calc(50% - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  #jobDetail div:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  #jobDetail input,
+  #jobDetail textarea {
+    border: none; /* Remove the border */
+    border-bottom: 1px solid #ccc; /* Add a bottom border */
+    padding: 8px; /* Adjust padding */
+    width: 100%;
+    background-color: transparent; /* Set background color to transparent */
+}
+
+  @media only screen and (max-width: 700px) {
+   .pp {
+      text-align: right; 
+	  margin-left:20%;/* Adjust alignment for mobile devices */
+    }   
+   #jobDetail div {
+      flex: 0 0 auto  %;
+	  justify-content:space-between ;
+      margin-right: 5px;
+      margin-bottom: 10px;
+    }
+  }
+  
+    .btn-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+</style>
+</head>
+<body>
+<div class="header">
+    <div class="header-left">
+      <div class="icon">
+        <p>A</p>
+      </div>
+      <span>Welcome <br>  Amina Nazir</span>
+    </div>
+    <div class="header-right">
+      Go to Dashboard
+      <span class="dashboard-icon"><img src="kk.png" alt="Dashboard Icon" /></span>
+    </div>
+  </div>
+<form>
+<div class="container">
+  <div class="form-group">
+    <label for="name">Job Title</label>
+    <input class="jb1" type="text" id="name" name="name" placeholder="Front end Professional Needed for Dubbing Platform">
+  </div>
+
+  <div class="section-header"><p> Job Details<span class="pp">Posted On: Mar 29, 2024</span> </p></div>
+  <div class="form-group">
+    <div class="container1">
+      <label for="technology" style="color: #737373; font-weight: 500; ">Technology</label>
+      <input type="text" class="inputField" id="technology" name="technology" placeholder="Front End Development">
+       <div id="jobDetail">
+          <div>
+            <label for="clientBudget"style="color:#737373; font-weight:500;">Client Budget</label>
+            <input type="number" id="clientBudget" name="clientBudget" placeholder="$600.00">
+          </div>
+          <div>
+            <label for="experienceLevel"style="color:#737373; font-weight:500;">Experience Level</label>
+            <input type="text" id="experienceLevel" name="experienceLevel" placeholder="Intermediate">
+          </div>
+          <div>
+            <label for="weeklyLimit"style="color:#737373; font-weight:500;">Weekly Limit</label>
+            <input type="text" id="weeklyLimit" name="weeklyLimit" placeholder="30 Hours">
+          </div>
+          <div>
+            <label for="duration"style="color:#737373; font-weight:500;">Duration</label>
+            <input type="date" id="duration" name="duration" placeholder="1-3 months">
+          </div>
+          <div>
+            <label for="estimatedDuration"style="color:#737373; font-weight:500;">Estimated Duration</label>
+            <input type="time" id="estimatedDuration" name="estimatedDuration" placeholder="Select a duration">
+          </div>
+		  
+          <div>
+            <label for="connectsRequiredRank"style="color:#737373; font-weight:500;">Connects Required Rank</label>
+            <input type="number" id="connectsRequiredRank" name="connectsRequiredRank" placeholder="16">
+          </div>
+		   <div>
+            <label for="connectsremaining"style="color:#737373; font-weight:500;">Connects Remaining</label>
+            <input type="number" id="connectsremaining" name="connectsremaining" placeholder="55">
+          </div>
+		   <div>
+            <label for="yourbid"style="color:#737373; font-weight:500;">Your Bids </label>
+            <input type="number" id="yourbid" name="yourbid" placeholder="0">
+          </div>
+		  <div>
+            <label for="Rank"style="color:#737373; font-weight:500;"> Rank </label>
+            <input type="text" id="Rank" name="Rank" placeholder="4th">
+          </div>
+          <div>
+            <label for="rateApplied"style="color:#737373; font-weight:500;">Rate Applied</label>
+            <input type="number" id="rateApplied" name="rateApplied" placeholder="$600.00">
+          </div>
+          <div>
+            <label for="upworkFee"style="color:#737373; font-weight:500;">Upwork Fee</label>
+            <input type="number" id="upworkFee" name="upworkFee" placeholder="$60.00">
+          </div>
+          <div>
+            <label for="receive"style="color:#737373; font-weight:500;">Receive</label>
+            <input type="number" id="receive" name="receive" placeholder="$540.00">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea id="description" name="description" placeholder="Write description here..."rows="4"style="box-shadow: 0 2px 4px rgba(14, 15, 15, 0.9)";></textarea>
+
+    <label for="coverLetter">Cover Letter</label>
+    <textarea id="coverLetter" name="coverLetter" placeholder="Write coverLetter here..." rows="4"style="box-shadow: 0 2px 4px rgba(14, 15, 15, 0.9);"></textarea>
+</div>
+    <div class="btn-container">
+      <button class="btn1" type="button" onclick="refreshPage()"> Refresh</button>
+      <button class="btn" type="submit"> Save </button>
+    </div>
+</form>
+
+<script>
+  function refreshPage() {
+    location.reload(); 
+  }
+</script>
+
+</body>
+</html>

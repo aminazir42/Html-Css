@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTP verification</title>
+  <style>
+    body {
+      background-image: url('https://wallpaperswide.com/download/light_background-wallpaper-2560x1440.jpg'); 
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
+      margin: 0; 
+      background-color: #f5f5f5;
+      font-family: 'DM Sans', sans-serif; 
+    }
+
+    .form {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 90%;
+      max-width: 300px;
+      border-radius: 12px;
+      position: relative;
+      margin-bottom: 20%;
+    }
+
+    .back-arrow-container {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .back-arrow {
+      font-size: 24px;
+      font-weight: bold;
+      color: black;
+      cursor: pointer;
+    }
+
+    .title-container {
+      display: flex;
+      align-items: center;
+      margin-left: -35%;
+    }
+
+    .arrow {
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      color: black;
+      margin-left: 10px; /* Adjust the spacing between arrow and text */
+    }
+
+    .message {
+      color: #a3a3a3;
+      font-size: 14px;
+      margin-top: 10px;
+      margin-bottom: 0; /* Remove bottom margin */
+      text-align: center;
+    }
+
+    .email {
+      color: #00508C;
+      text-decoration: none; /* Remove underline */
+    }
+
+    .inputs {
+      margin-top: 20px; /* Adjusted margin-top */
+      display: flex;
+      justify-content: center;
+    }
+
+    .otp-box {
+      width: 40px; /* Increased the size */
+      height: 40px; /* Increased the size */
+      text-align: center;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+      margin: 0 5px;
+      font-size: 18px; /* Increased font size */
+    }
+
+    .inputs input:focus {
+      border-bottom: 1.5px solid royalblue;
+      outline: none;
+    }
+
+    .resend-otp {
+      font-size: 14px;
+      color: #a3a3a3;
+      margin-top: 20px; /* Adjusted margin-top */
+    }
+
+    .resend-otp a {
+      color: #00508C;
+      text-decoration: none; /* Remove underline */
+    }
+  </style>
+</head>
+<body>
+  <form class="form" id="otpForm" action="page3.html" method="post"> <!-- Added id="otpForm" -->
+    <div class="back-arrow-container">
+      <a href="page1.html" class="back-arrow"></a>
+    </div>
+    <div class="title-container">
+      <span class="arrow">🠔</span> <!-- Unicode arrow character pointing right -->
+      <div class="title">OTP verification</div>
+    </div>
+    <br>
+    <p class="message">We have sent OTP code on your email address:</p>
+    <a href="mailto:aminazir23@gmail.com" class="email" style="color: #00508C;">aminazir23@gmail.com</a>
+    <div class="inputs">
+      <input id="input1" class="otp-box" type="text" maxlength="1" required oninput="moveToNext(this, 'input2')" onkeydown="moveToPrev(this, 'input1')">
+      <input id="input2" class="otp-box" type="text" maxlength="1" required oninput="moveToNext(this, 'input3')" onkeydown="moveToPrev(this, 'input1')">
+      <input id="input3" class="otp-box" type="text" maxlength="1" required oninput="moveToNext(this, 'input4')" onkeydown="moveToPrev(this, 'input2')">
+      <input id="input4" class="otp-box" type="text" maxlength="1" required oninput="moveToNext(this, 'input5')" onkeydown="moveToPrev(this, 'input3')">
+      <input id="input5" class="otp-box" type="text" maxlength="1" required oninput="moveToNext(this, 'input6')" onkeydown="moveToPrev(this, 'input4')">
+      <input id="input6" class="otp-box" type="text" maxlength="1" required oninput="moveToNext(this, 'input6')" onkeydown="moveToPrev(this, 'input5')">
+    </div>
+    <p class="resend-otp">Didn't receive OTP? <a href="#">Resend OTP</a></p>
+    <!-- Removed submit button -->
+  </form>
+  <script>
+    function moveToNext(currentInput, nextInputId) {
+      if (currentInput.value.length === 1) {
+        document.getElementById(nextInputId).focus();
+        // Check if all inputs are filled and submit the form
+        checkAndSubmitForm();
+      }
+    }
+
+    function moveToPrev(currentInput, prevInputId) {
+      if (event.key === 'Backspace' || event.key === 'Delete') {
+        if (currentInput.value.length === 0) {
+          document.getElementById(prevInputId).focus();
+        }
+      }
+    }
+
+    function checkAndSubmitForm() {
+      // Check if all inputs are filled
+      var inputs = document.querySelectorAll('.otp-box');
+      var allFilled = true;
+      inputs.forEach(function(input) {
+        if (input.value.length !== 1) {
+          allFilled = false;
+        }
+      });
+      // If all inputs are filled, submit the form
+      if (allFilled) {
+        document.getElementById('otpForm').submit();
+      }
+    }
+  </script>
+</body>
+</html>
